@@ -1,0 +1,17 @@
+E:\Projetos\ServiceMonitor\ServiceMonitor\bin\Release\Certificado\certunimedbelemrkp.pfx
+E:\Projetos\ServiceMonitor\ServiceMonitor\bin\Release\ServiceMonitor.exe.config
+E:\Projetos\ServiceMonitor\ServiceMonitor\bin\Release\ServiceMonitor.exe
+E:\Projetos\ServiceMonitor\ServiceMonitor\bin\Release\ServiceMonitor.pdb
+E:\Projetos\ServiceMonitor\ServiceMonitor\bin\Release\Dapper.dll
+E:\Projetos\ServiceMonitor\ServiceMonitor\bin\Release\Newtonsoft.Json.dll
+E:\Projetos\ServiceMonitor\ServiceMonitor\bin\Release\Dapper.xml
+E:\Projetos\ServiceMonitor\ServiceMonitor\bin\Release\Newtonsoft.Json.xml
+E:\Projetos\ServiceMonitor\ServiceMonitor\obj\Release\ServiceMonitor.ProjectInstaller.resources
+E:\Projetos\ServiceMonitor\ServiceMonitor\obj\Release\ServiceMonitor.Resource.Seguranca.resources
+E:\Projetos\ServiceMonitor\ServiceMonitor\obj\Release\ServiceMonitor.Resource.SQL.resources
+E:\Projetos\ServiceMonitor\ServiceMonitor\obj\Release\ServiceMonitor.Resource.StrConexao.resources
+E:\Projetos\ServiceMonitor\ServiceMonitor\obj\Release\ServiceMonitor.csproj.GenerateResource.cache
+E:\Projetos\ServiceMonitor\ServiceMonitor\obj\Release\ServiceMonitor.csproj.CoreCompileInputs.cache
+E:\Projetos\ServiceMonitor\ServiceMonitor\obj\Release\ServiceMonitor.csproj.CopyComplete
+E:\Projetos\ServiceMonitor\ServiceMonitor\obj\Release\ServiceMonitor.exe
+E:\Projetos\ServiceMonitor\ServiceMonitor\obj\Release\ServiceMonitor.pdb

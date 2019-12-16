@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BuscarDadosUsuario" xml:space="preserve">
+    <value>SELECT 
+US.CODIGO AS CODIGO,
+PESSOA,
+LOGIN,
+SENHA,
+CASE WHEN US.TIPO = 'I' THEN 'INTERNO' ELSE 'EXTERNO' END AS TIPO,
+DOMINIO,
+EMAIL,
+RECUPEROU_SENHA,
+STATUS,
+UPPER(PS.NOME) AS NOME,
+ps.cpf_cnpj as Cpf,
+PS.celular as Celular,
+coalesce (convert(varchar(10),PS.nasc_criacao,103) , '') as DataNascimento
+FROM M0.USUARIO	US
+JOIN M0.PESSOA	PS ON PS.CODIGO = US.PESSOA
+WHERE 
+1=1
+AND LOGIN = @LOGIN
+AND STATUS = 'A'</value>
+  </data>
+  <data name="BuscarDadosUsuarioCooperado" xml:space="preserve">
+    <value>SELECT TOP 1 
+LO.*,
+coalesce (convert(varchar(10),PE.DataNascimento ,103) , '') as DataNascimento,
+PE.Cnp     AS cnp, 
+EP.Email   AS email, 
+CAST(TP.DDD AS VARCHAR) + CAST(TP.Numero AS VARCHAR) AS celular
+FROM Site.adm.Login                   LO WITH (NOLOCK)
+LEFT JOIN Cardio.dbo.PrestadorServico PS WITH (NOLOCK) ON PS.CodigoReduzido = CASt(LO.Usuario AS BIGINT )
+JOIN Cardio.dbo.Pessoa           PE WITH (NOLOCK) ON PS.Pessoa = PE.AutoId AND PS.Classe = 101 AND PE.AutoId IS NOT NULL
+LEFT JOIN Cardio.dbo.EmailPessoa      EP WITH (NOLOCK) ON EP.Pessoa = PE.AutoId AND EP.FimVigencia IS NULL
+LEFT JOIN Cardio.dbo.TelefonePessoa   TP WITH (NOLOCK) ON TP.Pessoa = PE.AutoId AND TP.FimVigencia IS NULL AND TP.Tipo = 2
+WHERE 1 = 1 
+AND LO.PortalCooperado = 1
+AND LO.Habilitado = 1
+AND LO.Usuario = @crm
+ORDER BY LO.AutoId, TP.AutoId, EP.AutoId DESC</value>
+  </data>
+  <data name="BuscarDadosUsuarioLogin" xml:space="preserve">
+    <value>SELECT 
+CODIGO AS LoginWebCodigo,
+CPF AS LoginWebCPF,
+EMAIL AS LoginWebEmail,
+coalesce (convert(varchar(10),DT_NASCIMENTO,103) , '') as LoginWebDataNascimento,
+NOME AS LoginWebNome,
+TELEFONE AS LoginWebTelefone,
+SENHA AS LoginWebSenha,
+CONFIRMACAO_CADASTRO AS LoginWebConfirmacao_Cadastro,
+DT_CANCELAMENTO AS LoginWebDt_Cancelamento,
+USUARIO_CANCELAMENTO AS UsuarioCodigo,
+USUARIO_VENDEDOR AS UsuarioCodigoVendedor,
+case when USUARIO_VENDEDOR is null then 'CLIENTE' else 'VENDEDOR' end as TipoUsuario
+FROM m1.Login where Dt_Cancelamento is null
+and CPF = @Login 
+and (Dt_Cancelamento is null or Dt_Cancelamento &gt; GETDATE())</value>
+    <comment>BuscarUsuarioPorLogin: select distinct u.codigo as UsuarioCodigo,
+			    u.login as Login,
+				u.senha as Senha,
+				u.pessoa as PessoaCodigo,
+				u.dominio as UsuarioDominio,
+				u.email as UsuarioEmail,
+				u.recuperou_senha as RecuperouSenha
+from m0.Usuario u
+join m0.Usuario_Perfil up on u.codigo = up.usuario
+left join m0.excecao e on u.codigo = e.usuario 
+where u.login like @Login and u.senha like @Senha and u.status like 'A' and 
+	  ((((CAST(up.data_inicio as DATETIME) is null) or
+	  (CAST(up.data_inicio as DATETIME) &lt;= GETDATE())) and
+	  ((CAST(up.data_fim as DATETIME) is null) or
+	  (CAST(up.data_fim as DATETIME) &gt;= GETDATE()))) or ( e.status = 'A' and e.habilitar = 'A'))</comment>
+  </data>
+  <data name="CreditCardLog" xml:space="preserve">
+    <value>EXEC [MP].[CreditCardRedeLog]</value>
+  </data>
+  <data name="EmailLog" xml:space="preserve">
+    <value>exec [WS].[EmailLog]</value>
+  </data>
+  <data name="EmailServidor" xml:space="preserve">
+    <value>SELECT [Codigo]
+      ,[Servidor]
+      ,[Porta]
+      ,[Seguranca]
+      ,[Usuario]
+      ,[Senha]
+      ,[OrigemEmail] as Remetente
+      ,[OrigemEmailNome]
+      ,[Cc]
+  FROM [M0].[EmailServidor]
+WHERE [Codigo] = @servidor</value>
+  </data>
+  <data name="ListarModulosMenuFavoritosPorUsuario" xml:space="preserve">
+    <value>SELECT DISTINCT
+RE.CODIGO		 AS RecursoCodigo,
+RE.DESCRICAO	 AS RecursoRotulo,
+ME.Nome			 AS RecursoNome,
+RE.Icone		 AS RecursoIcone,
+RE.tipo			 AS RecursoTipo,
+
+RE.modulo		 AS ModuloCodigo,
+MO.descricao	 AS ModuloRotulo,
+MO.nome          AS ModuloNome,
+MO.icone		 AS ModuloIcone,
+
+SE.Codigo as Servico,
+--TSE.Url+Rota as ServicoUrl,
+Rota as ServicoUrl,
+TSE.TIPO_EXIBICAO AS ServicoTipoExibicao,
+RE.recurso_pai as RecursoPai,
+case when (select count(codigo) from m0.recurso sub where sub.recurso_pai = RE.Codigo ) &gt; 0 then 'S' else 'N' end as PossuiFilhos
+
+
+FROM M0.USUARIO			US
+JOIN M0.PESSOA			PE	ON PE.CODIGO = US.PESSOA
+JOIN M0.Usuario_Perfil	UP	ON US.CODIGO = UP.USUARIO 
+JOIN M0.PERFIL			PF	ON PF.codigo = UP.perfil 
+JOIN M0.Perfil_Recurso  PR	ON PR.perfil = PF.codigo
+JOIN M0.RECURSO			RE	ON RE.codigo = PR.recurso
+JOIN M0.RECURSO			MO  ON RE.MODULO = MO.CODIGO
+LEft JOIN M0.SERVICO			SE  ON SE.Recurso = RE.codigo
+LEft JOIN M0.Tipo_Servico TSE ON SE.Tipo_Servico = TSE.Codigo
+inner JOIN M0.ServicoMemorizar ME on SE.Codigo = ME.Servico
+
+WHERE 1=1
+AND US.CODIGO = @USUARIOCODIGO
+AND RE.MODULO = @MODULO
+AND RE.TIPO in ('MN', 'MND', 'MNR', 'MNS')
+AND RE.STATUS = 'A'
+AND ME.Favorito = 'S'
+--GROUP BY 
+--RE.CODIGO, RE.DESCRICAO, RE.NOME, RE.Icone, RE.TIPO_EXIBICAO, 
+--RE.modulo, MO.descricao, MO.nome, MO.icone</value>
+  </data>
+  <data name="ListarModulosMenuPorUsuario" xml:space="preserve">
+    <value>SELECT DISTINCT
+RE.Ordem		 AS Ordem,
+RE.CODIGO		 AS RecursoCodigo,
+RE.DESCRICAO	 AS RecursoRotulo,
+RE.Nome			 AS RecursoNome,
+RE.Icone		 AS RecursoIcone,
+RE.tipo			 AS RecursoTipo,
+
+RE.modulo		 AS ModuloCodigo,
+MO.descricao	 AS ModuloRotulo,
+MO.nome          AS ModuloNome,
+MO.icone		 AS ModuloIcone,
+
+SE.Codigo as Servico,
+--TSE.Url+Rota as ServicoUrl,
+Rota as ServicoUrl,
+TSE.TIPO_EXIBICAO AS ServicoTipoExibicao,
+RE.recurso_pai as RecursoPai,
+case when (select count(codigo) from m0.recurso sub where sub.recurso_pai = RE.Codigo ) &gt; 0 then 'S' else 'N' end as PossuiFilhos
+
+FROM M0.USUARIO			US
+JOIN M0.PESSOA			PE	ON PE.CODIGO = US.PESSOA
+JOIN M0.Usuario_Perfil	UP	ON US.CODIGO = UP.USUARIO 
+JOIN M0.PERFIL			PF	ON PF.codigo = UP.perfil 
+JOIN M0.Perfil_Recurso  PR	ON PR.perfil = PF.codigo
+JOIN M0.RECURSO			RE	ON RE.codigo = PR.recurso
+JOIN M0.RECURSO			MO  ON RE.MODULO = MO.CODIGO
+LEft JOIN M0.SERVICO			SE  ON SE.Recurso = RE.codigo
+LEft JOIN M0.Tipo_Servico TSE ON SE.Tipo_Servico = TSE.Codigo
+
+WHERE 1=1
+AND US.CODIGO = @USUARIOCODIGO
+AND RE.MODULO = @MODULO
+AND RE.TIPO in ('MN', 'MND', 'MNR', 'MNS')
+AND RE.STATUS = 'A'
+Order by RE.Ordem
+--GROUP BY 
+--RE.CODIGO, RE.DESCRICAO, RE.NOME, RE.Icone, RE.TIPO_EXIBICAO, 
+--RE.modulo, MO.descricao, MO.nome, MO.icone</value>
+  </data>
+  <data name="ListarModulosPorUsuario" xml:space="preserve">
+    <value>SELECT DISTINCT
+RE.Nome AS Rotulo,
+coalesce(RE.ICONE, '') AS Icone,
+RE.NOME AS Modulo,
+RE.codigo AS Codigo,
+'/SynergiusServicos/M0/api/ws/listarmenu' as ServicoUrl,
+RE.descricao as Descricao
+
+FROM M0.Usuario			US
+JOIN M0.Pessoa			PE	ON PE.CODIGO = US.PESSOA
+JOIN M0.Usuario_Perfil	UP	ON US.CODIGO = UP.USUARIO 
+JOIN M0.Perfil			PF	ON PF.codigo = UP.perfil 
+JOIN M0.Perfil_Recurso  PR	ON PR.perfil = PF.codigo
+JOIN M0.Recurso			RE	ON RE.codigo = PR.recurso
+
+WHERE 1=1
+AND UPPER(LOGIN) = @LOGIN
+AND US.STATUS = 'A'
+AND ( (CAST(UP.data_inicio as date) &lt;= convert(date, GETDATE())) and (CAST(UP.DATA_FIM as date) &gt;= convert(date, GETDATE()) or UP.DATA_FIM is null) )
+AND RE.TIPO = 'M'
+GROUP BY RE.DESCRICAO,RE.ICONE,RE.NOME, RE.CODIGO</value>
+  </data>
+  <data name="PathServidorArquivos" xml:space="preserve">
+    <value>select top 1 PathServidorArquivos from M0.Server where [url] = @url</value>
+  </data>
+  <data name="ServicoLog" xml:space="preserve">
+    <value>exec [WS].[ServicoLog] </value>
+  </data>
+  <data name="SMSLog" xml:space="preserve">
+    <value>exec [WS].[SMSLog]</value>
+  </data>
+  <data name="UpdateBoletoCardio" xml:space="preserve">
+    <value />
+    <comment>RESPONSÁVEL PELA BAIXA DO DOCUMENTO FINANCEIRO DO CARDIO.</comment>
+  </data>
+  <data name="UpdateBoletoSynergius" xml:space="preserve">
+    <value>UPDATE m1.dados_boleto
+SET situacao = '{0}', 
+motivo = '{1}', 
+datapagamento = '{2}'
+WHERE 1 = 1
+AND codigo = {3}
+AND contrato = {4}
+
+UPDATE m1.Contrato
+SET Situacao = 5
+WHERE Codigo = {5}</value>
+    <comment>RESPONSÁVEL PELA BAIXA DO CONTRATO DO SYNERGIUS.</comment>
+  </data>
+  <data name="TarefaExecucaoLog" xml:space="preserve">
+    <value>exec SM.TarefaExecucaoLog</value>
+  </data>
+</root>
